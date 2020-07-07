@@ -6152,6 +6152,14 @@ footer {
   color: #5a8df8;
 }
 
+.purple1 {
+  background-color: #3e0875;
+}
+
+.orange1 {
+  background-color: #ffb402;
+}
+
 .header {
   width: 100vw;
   height: 100vh;
@@ -6482,7 +6490,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 45px 0;
+  margin: 45px 0;
 }
 
 .second-block__column {
@@ -6513,7 +6521,7 @@ footer {
 }
 
 .sb-card:hover {
-  border: 3px solid #6656ff;
+  outline: 3px solid #6656ff;
   border-radius: 10px;
 }
 
@@ -6524,12 +6532,15 @@ footer {
 }
 
 .sb-card:hover .sb-card__img {
-  padding-top: 5px;
-  margin-bottom: 5px;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 .sb-card:hover .sb-card__text {
-  padding-bottom: 5px;
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .sb-card__title {
@@ -6562,6 +6573,7 @@ footer {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+  padding-bottom: 5px;
   -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
