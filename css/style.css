@@ -6099,29 +6099,85 @@ footer {
 }
 
 .purple {
-  background-color: #8637ff;
+  background-color: #3e0875;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.purple:hover {
+  border: 1px solid #3e0875;
+  background-color: #fff;
+  color: #3e0875;
+}
+
+.purple:hover a {
+  color: #3e0875;
 }
 
 .orange {
   background-color: #ffb402;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.orange:hover {
+  border: 1px solid #ffb402;
+  background-color: #fff;
+  color: #ffb402;
+}
+
+.orange:hover a {
+  color: #ffb402;
 }
 
 .blue {
   background-color: #5a8df8;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.blue:hover {
+  border: 1px solid #5a8df8;
+  background-color: #fff;
+  color: #5a8df8;
+}
+
+.blue:hover a {
+  color: #5a8df8;
 }
 
 .header {
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(../img/main/bg.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
-.header__body {
-  margin-top: 104px;
-  position: relative;
+.header__main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 160px;
+  background-image: url(../img/main/bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  z-index: -1;
+}
+
+.header__top {
+  background-color: #3e0875;
+  z-index: 2;
+}
+
+.header__top img {
+  width: 100%;
+  height: 100%;
 }
 
 .header__body-border {
@@ -6196,49 +6252,59 @@ footer {
 }
 
 .tooltip {
-  margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  position: relative;
+  top: 350px;
+  right: 50px;
 }
 
 .tooltip__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 100%;
 }
 
 .tooltip__body {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   max-width: 360px;
-  position: relative;
   -webkit-box-shadow: 0 0 30px #e3e3e3, inset 0 -1px 0 #e8e8e8;
           box-shadow: 0 0 30px #e3e3e3, inset 0 -1px 0 #e8e8e8;
   background-color: #ffffff;
-  padding: 35px 45px 42px;
+  padding: 19px 28px 31px 33px;
   text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tooltip__body:hover {
+  border-radius: 10px;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 29px 38px 41px 43px;
 }
 
 .tooltip__label {
   color: #2c3e50;
   font-family: "Graphik Kinopoisk LC Web - Semibold";
   font-size: 23px;
+  line-height: 1.4;
   font-weight: 400;
   margin-bottom: 27px;
 }
 
 .tooltip__button {
   background-color: #ffb402;
+  border: 2px solid #ffb402;
   border-radius: 5px;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .tooltip__button button {
@@ -6248,6 +6314,23 @@ footer {
   font-family: "Graphik Kinopoisk LC Web";
   font-size: 18px;
   font-weight: 700;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tooltip__button:hover {
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #fff;
+}
+
+.tooltip__button:hover button {
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: #ffb402;
 }
 
 .tooltip__icon {
@@ -6343,6 +6426,7 @@ footer {
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  border: 2px solid #ffffff;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6355,6 +6439,16 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 47px 24px 37px;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fb-card__body:hover {
+  border: 2px solid #3e0875;
+  -webkit-transform: translate3d(0, -20px, 0);
+          transform: translate3d(0, -20px, 0);
 }
 
 .fb-card__img {
@@ -6393,8 +6487,8 @@ footer {
 
 .second-block__column {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.333%;
-          flex: 0 1 33.333%;
+      -ms-flex: 0 1 33%;
+          flex: 0 1 33%;
 }
 
 .sb-card {
@@ -6412,6 +6506,30 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sb-card:hover {
+  border: 3px solid #6656ff;
+  border-radius: 10px;
+}
+
+.sb-card:hover .sb-card__title {
+  opacity: 0.2;
+  -webkit-transform: translate3d(-20px, 40px, 0);
+          transform: translate3d(-20px, 40px, 0);
+}
+
+.sb-card:hover .sb-card__img {
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sb-card:hover .sb-card__text {
+  padding-bottom: 5px;
 }
 
 .sb-card__title {
@@ -6424,11 +6542,17 @@ footer {
   font-size: 60px;
   font-weight: 700;
   line-height: 26px;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .sb-card__img {
   min-height: 118px;
   margin-bottom: 19px;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .sb-card__text {
@@ -6438,6 +6562,9 @@ footer {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .third-block {
@@ -6745,8 +6872,9 @@ footer {
   background-image: url(../img/main/fourth-block_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   width: 100%;
-  max-height: 531px;
+  height: 531px;
   margin: 250px auto 0;
 }
 
@@ -6788,10 +6916,20 @@ footer {
           align-items: center;
 }
 
+.five-block__icons:hover img {
+  width: 105px;
+  height: 105px;
+  margin: 15px;
+}
+
 .five-block__icons img {
   width: 95px;
   height: 95px;
   margin: 25px;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .five-block__icons p {
@@ -6911,12 +7049,24 @@ footer {
   padding: 8px 0 0 48px;
 }
 
+.sixth-block__column:nth-child(1):hover .card-sixth {
+  border: 2px solid #3e0875;
+}
+
 .sixth-block__column:nth-child(2) .card-sixth__img {
   padding: 53px 78px;
 }
 
+.sixth-block__column:nth-child(2):hover .card-sixth {
+  border: 2px solid #ffb402;
+}
+
 .sixth-block__column:nth-child(3) .card-sixth__img {
   padding: 56px 61px;
+}
+
+.sixth-block__column:nth-child(3):hover .card-sixth {
+  border: 2px solid #5a8df8;
 }
 
 .sixth-block__card {
@@ -6925,6 +7075,33 @@ footer {
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   background-color: #ffffff;
+}
+
+.card-sixth {
+  cursor: pointer;
+}
+
+.card-sixth:hover {
+  -webkit-box-shadow: 0px 0px 59px -17px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 59px -17px rgba(0, 0, 0, 0.75);
+}
+
+.card-sixth:hover .purple {
+  border: 2px solid #3e0875;
+  background-color: #fff;
+  color: #3e0875;
+}
+
+.card-sixth:hover .orange {
+  border: 2px solid #ffb402;
+  background-color: #fff;
+  color: #ffb402;
+}
+
+.card-sixth:hover .blue {
+  border: 2px solid #5a8df8;
+  background-color: #fff;
+  color: #5a8df8;
 }
 
 .card-sixth__title {
@@ -7123,6 +7300,14 @@ footer {
 
 .ninth-block__card {
   margin-top: -200px;
+  cursor: pointer;
+}
+
+.ninth-block__card:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#9130ff), to(#5657f8));
+  background-image: -o-linear-gradient(right, #9130ff 0%, #5657f8 100%);
+  background-image: linear-gradient(to left, #9130ff 0%, #5657f8 100%);
+  border-radius: 10px;
 }
 
 .ninth-block__checktext {
@@ -7163,7 +7348,7 @@ footer {
   font-family: "Graphik Kinopoisk LC Web - Semibold";
   font-size: 27px;
   font-weight: 400;
-  margin-top: 57 px;
+  margin-top: 57px;
 }
 
 .footer {
@@ -7179,6 +7364,10 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 42px 0;
+}
+
+.footer__column img {
+  padding: 10px;
 }
 
 .footer__text {
@@ -7696,7 +7885,7 @@ footer {
   }
 }
 
-.webp .header { background-image: url(../img/main/bg.webp); }
+.webp .header__main { background-image: url(../img/main/bg.webp); }
 
 .webp .header__subtitle { background-image: url(../img/header/subtitle_bg.webp); }
 
